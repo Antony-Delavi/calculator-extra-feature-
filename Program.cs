@@ -6,7 +6,7 @@ namespace SimpleCalculator{
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("1. Calculator \r\n2. Sheeps counter(Extra feature) \r\nType 1 or 2: ");
+            Console.WriteLine("1. Calculator \r\n2. Sheeps counter(Extra feature) \r\n3. Paint!!! \r\nType 1,2 or 3: ");
             char answer = char.Parse(Console.ReadLine());
             switch (answer) {
                 case '1':
@@ -24,7 +24,10 @@ namespace SimpleCalculator{
                 Console.WriteLine("How much sheeps you need?");
                 int sheepsNeeded = int.Parse(Console.ReadLine());
                     sheepsss(sheepsNeeded);
-                    break;                   
+                    break;
+                case '3':
+                    startMsPaint();
+                    break;
             }
         }
 
@@ -54,6 +57,11 @@ namespace SimpleCalculator{
                 Console.Write($"{i + 1} Sheeps... ");
             }
             return "";
+        }
+
+        public static void startMsPaint()
+        {
+            System.Diagnostics.Process.Start("powershell.exe", "mspaint");
         }
     }
 }
